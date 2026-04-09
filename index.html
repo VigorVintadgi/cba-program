@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creators Branding Arc (CBA) – Program Details</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #035665;  /* deep teal background outside pages */
+      font-family: 'Lato', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* PDF page simulation – brand green background */
+    .page {
+      max-width: 1100px;
+      width: 100%;
+      background: #009082;  /* primary brand green */
+      margin: 0 auto 30px auto;
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      color: white;
+    }
+
+    /* ----- TILED DIAGONAL WATERMARK (repeating text) ----- */
+    .watermark-tiled {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='10' y='20' font-family='Arial, sans-serif' font-size='14' fill='white' opacity='0.12' transform='rotate(45 20 20)'%3EEmanel Professional Networking Ltd%3C/text%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 180px 180px;
+      background-position: 0 0;
+    }
+
+    /* content sits above watermark */
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem 3rem;
+      max-width: 65ch;   /* controls line length (~6 words per line) */
+      margin: 0 auto;
+    }
+
+    /* typography – white/light text on green */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.5px;
+      border-left: 6px solid #FDDD89;
+      padding-left: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+    .subhead {
+      font-size: 1.2rem;
+      color: #FDDD89;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      color: #FDDD89;
+      margin: 2rem 0 1rem 0;
+      font-weight: 600;
+      border-left: 3px solid #FDDD89;
+      padding-left: 0.8rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: #052234;
+      margin: 1rem 0 0.5rem 0;
+      font-weight: 700;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    li {
+      margin-left: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .highlight {
+      background: #FDDD89;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      font-weight: 700;
+      color: #052234;
+      display: inline-block;
+      font-size: 0.85rem;
+    }
+    .grid-2 {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(2px);
+      padding: 1rem 1.2rem;
+      border-radius: 20px;
+      flex: 1;
+      border: 1px solid rgba(253,221,137,0.3);
+    }
+    .card h4 {
+      color: #FDDD89;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: white;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(253,221,137,0.4);
+      font-size: 0.7rem;
+      color: #FDDD89;
+      text-align: center;
+    }
+    /* ensure all text has good contrast */
+    a {
+      color: #FDDD89;
+    }
+    @media print {
+      body {
+        background: #009082;
+        padding: 0;
+        margin: 0;
+      }
+      .page {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+        border-radius: 0;
+      }
+      .watermark-tiled {
+        opacity: 0.15;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .card {
+        background: rgba(255,255,255,0.15);
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- tiled diagonal watermark (repeats every 180px) -->
+    <div class="watermark-tiled"></div>
+    <div class="content">
+      <h1>Creators Branding Arc (CBA)</h1>
+      <div class="subhead">A free 5‑week branding path        · From visibility to credibility</div>
+      
+      <p><strong>Presented by Emanel Professional Networking Ltd</strong> through its <strong>Apex Ledger Awards Unit</strong>. The Creators Branding Arc is a structured, transitory program for serious creators who want to build disciplined digital visibility, document impact, and align their work with the ideals of Self‑Empowerment, Self‑Determination, and Dignity of Human Persons.</p>
+
+      <h2>Program Structure</h2>
+      <ul>
+        <li><span class="highlight">Duration:</span> 5 consecutive weeks, one activity per week.</li>
+        <li><span class="highlight">Format:</span> Virtual (live interactive sessions via Youtube Community,Tiktok,Facebook,and Instagram).</li>
+        <li><span class="highlight">Weekly commitment:</span> ~7 minutes/creator/week.</li>
+        <li><span class="highlight">Cohort size:</span> Limited spots (500–1000 creators amplified per season).</li>
+      </ul>
+
+      <h2>Your 5‑Week Journey</h2>
+      <div class="grid-2">
+        <div class="card"><h4>Week 1</h4><p>Highlight with Interview – articulate your creative identity.</p></div>
+        <div class="card"><h4>Week 2</h4><p>Thought Leadership – develop original perspectives.</p></div>
+        <div class="card"><h4>Week 3</h4><p>Q&A Session – clarify your perspective.</p></div>
+        <div class="card"><h4>Week 4</h4><p>Panel Session – industry voices and real‑world insights.</p></div>
+        <div class="card"><h4>Week 5</h4><p>Voting & Graduation – recognition and next steps.</p></div>
+      </div>
+
+      <h2>Season Calendar</h2>
+      <p>Programme runs in <strong>seasons</strong>. Each season = one complete 5‑week arc. After each season, a <strong>1‑week break</strong> (sustainable for both creators and organisers). In a 52‑week year, this allows for <strong>8 full seasons</strong> (5 weeks arc + 1 week break = 6 weeks per cycle; 52 ÷ 6 ≈ 8.6 → 8 seasons).</p>
+      <ul>
+        <li><strong>2026 Season 1:</strong> 02 March – 03 April</li>
+        <li><strong>2026 Season 2:</strong> 13 April – 15 May</li>
+        <li><strong>2026 Season 3:</strong> 25 May – 26 June</li>
+        <li><strong>2026 Season 4:</strong> 06 July – 07 August</li>
+        <li><strong>2026 Season 5:</strong> 17 August – 18 September</li>
+        <li><strong>2026 Season 6:</strong> 28 September – 30 October</li>
+      </ul>
+      <p><em>Note: Each creator may participate using only one creator page in any season. This ensures focused engagement and fair access.</em></p>
+
+      <h2>What You Gain</h2>
+      <ul>
+        <li>Practical framework to move from superficial virality to credible impact, supported by curated audience.</li>
+        <li>Documented progress/portfolio/profile you can showcase to clients or collaborators.</li>
+        <li>Potential pathway to the Apex Ledger Awards</li>
+        <li>Exclusive “Opportunity Desk” – invitation to Emanel’s professional network (outstanding performance required).</li>
+      </ul>
+
+      <h2>Eligibility & Commitment</h2>
+      <p>Open to creators, students, and professionals who agree to:</p>
+      <ul>
+        <li>Attend all 5 weekly sessions (live or with prior notice).</li>
+        <li>Complete weekly brand optimization prompts review.</li>
+        <li>Maintain a single creator page (any platform) throughout the season.</li>
+        <li>Abide by other rules for efficient and prodictive participation.</li>
+      </ul>
+
+      <h2>How to Join</h2>
+      <p>Register via the official CBA Google Form. When inner unit slot for any season is full, slots for next season are reserved for creators in subsequent units who played assigned roles in the current season. After registration, you will receive a confirmation email.</p>
+
+      <footer>
+        © 2026 Emanel Professional Networking Ltd – Apex Ledger Awards Unit. All rights reserved.<br>
+        Creators Branding Arc is a free program; no payment or membership is required. Participation in the Program does not grant automatic eligibility for Emanel services or the Awards.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
